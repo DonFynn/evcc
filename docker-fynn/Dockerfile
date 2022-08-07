@@ -10,4 +10,6 @@ RUN git clone https://github.com/DonFynn/evcc.git
 WORKDIR /opt/app/evcc
 RUN apt install make -y
 ENV PATH="/usr/lib/go-1.19/bin:${PATH}"
-RUN make && ./evcc
+RUN make 
+EXPORT 7070
+CMD ["./evcc"]
