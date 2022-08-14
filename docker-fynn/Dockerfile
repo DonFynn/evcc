@@ -11,5 +11,5 @@ WORKDIR /opt/app/evcc
 RUN apt install make -y
 ENV PATH="/usr/lib/go-1.19/bin:${PATH}"
 RUN make 
-EXPORT 7070
+EXPOSE 7070
 CMD ["./evcc"]
